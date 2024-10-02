@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Receipts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Blood Donation Receipt System</h1>
+
+        
+        <form id="donor-form" action="save_donor.php" method="POST">
+            <label for="donor_name">Donor Name:</label>
+            <input type="text" id="donor_name" name="donor_name" required>
+
+            <label for="blood_group">Blood Group:</label>
+            <select id="blood_group" name="blood_group" required>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+
+            <label for="donation_date">Donation Date:</label>
+            <input type="date" id="donation_date" name="donation_date" required>
+
+            <label for="receipt_number">Receipt Number:</label>
+            <input type="text" id="receipt_number" name="receipt_number" required>
+
+            <button type="submit">Save Receipt</button>
+        </form>
+
+        
+        <button id="fetch-donors-btn" onclick="fetchDonors()">View All Donors</button>
+
+        
+        <table id="donors-table">
+            <thead>
+                <tr>
+                    <th>Donor Name</th>
+                    <th>Blood Group</th>
+                    <th>Donation Date</th>
+                    <th>Receipt Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
